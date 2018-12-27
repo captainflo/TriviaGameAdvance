@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TriviaGame</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>TriviaGame</h1>
+        <div class="go">
+            <!-- <button id='start' type="button" class="btn btn-success">Start</button> -->
+        </div>
+        
+        <div id="show-number"><h2>30</h2></div>
+        <div id="time-left"></div>
+        <div class="quiz">
+            <div class="card">
+                <div class="question"></div>
+                <select id="select1" class="text-center" multiple></select>
+                <div class="question2"></div>
+                <select id="select2" class="text-center" multiple></select>
+                <div class="question3"></div>
+                <select id="select3" class="text-center" multiple></select>
+                <div class="question4"></div>
+                <select id="select4" class="text-center" multiple></select>
+                <div id="wrong"></div> 
+                <div id="correct"></div> 
+                <div id="unanswered"></div>
+            </div>
+        </div>
+        <div class="result">
+            <div class="correct"></div>
+            <div class="wrong"></div>
+            <div class="unanswered"></div>
+        </div>
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+    
+</body>
+</html>
