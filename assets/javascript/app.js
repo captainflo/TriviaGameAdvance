@@ -38,25 +38,25 @@ function decrement() {
         $("#time-left").text("Time Up Buddy !");
         if ($('#select1').is(':visible')){
             game.unanswered++;
-            $("#unanswered").html("<img src=" + images[2] + " width='400px'>");
+            $("#unanswered").html("<img src=" + images[2] + " width='400px'><div>what's up buddy?</div>");
             $('#select1').attr('disabled', 'disabled');
             slide2(); 
         }
         if ($('#select2').is(':visible')){
             game.unanswered++;
-            $("#unanswered").html("<img src=" + images[2] + " width='400px'>");
+            $("#unanswered").html("<img src=" + images[2] + " width='400px'><div>what's up buddy?</div>");
             $('#select2').attr('disabled', 'disabled');
             slide3(); 
         }
         if ($('#select3').is(':visible')){
             game.unanswered++;
-            $("#unanswered").html("<img src=" + images[2] + " width='400px'>");
+            $("#unanswered").html("<img src=" + images[2] + " width='400px'><div>what's up buddy?</div>");
             $('#select3').attr('disabled', 'disabled');
             slide4(); 
         }
         if ($('#select4').is(':visible')){
             game.unanswered++;
-            $("#unanswered").html("<img src=" + images[2] + " width='400px'>");
+            $("#unanswered").html("<img src=" + images[2] + " width='400px'><div>what's up buddy?</div>");
             $('#select4').attr('disabled', 'disabled');
             $('.result').show();
             result();
@@ -106,7 +106,7 @@ function refresh() {
         location.reload()
     });
 }
-
+// slideShow
 function slide2(){
     document.onkeyup = function(event){
         event.key
@@ -227,11 +227,11 @@ function appear4(){
    });
 }
 
-// count 
+
 $('#select1 option').on("click", function(){
     if ($('#select1 option:selected').val() === game.answers.a1 && $('#select1').is(':enabled')){
         game.correct++;
-        $("#correct").html("<img src=" + images[0] + " width='400px'>");
+        $("#correct").html("<img src=" + images[0] + " width='400px'><div>You did well!</div>");
         $('#select1').attr('disabled', 'disabled');
         stop();
         slide2();
@@ -239,7 +239,7 @@ $('#select1 option').on("click", function(){
     } 
     else if( $('#select1 option:selected').val() != game.answers.a1 && $('#select1').is(':enabled')){
         game.wrong++;
-        $("#unanswered").html("<img src=" + images[1] + " width='400px'>");
+        $("#unanswered").html("<img src=" + images[1] + " width='400px'><div>Wrong buddy A continent is a landmass with specific characteristics. ... By convention there are seven continents: Asia, Africa, North America, South America, Europe, Australia, and Antarctica.</div>");
         $('#select1').attr('disabled', 'disabled');
         slide2();
         stop();
@@ -250,7 +250,7 @@ $('#select2 option').on("click", function(){
     $("#correct").show();
     if ($('#select2 option:selected').val() === game.answers.a2 && $('#select2').is(':enabled')){
         game.correct++;
-        $("#correct").html("<img src=" + images[0] + " width='400px'>");
+        $("#correct").html("<img src=" + images[0] + " width='400px'><div>You did well!</div>");
         $('#select2').attr('disabled', 'disabled');
         stop();
         slide3();
@@ -258,7 +258,7 @@ $('#select2 option').on("click", function(){
     } 
     else if( $('#select2 option:selected').val() != game.answers.a2 && $('#select2').is(':enabled')){
         game.wrong++;
-        $("#unanswered").html("<img src=" + images[1] + " width='400px'>");
+        $("#unanswered").html("<img src=" + images[1] + " width='400px'><div>he world population is the total number of humans currently living, and was estimated to have reached 7.5 billion people as of May 2018</div>");
         $('#select2').attr('disabled', 'disabled');
         stop();
         slide3();
@@ -268,14 +268,14 @@ $('#select2 option').on("click", function(){
 $('#select3 option').on("click", function(){
     if ($('#select3 option:selected').val() === game.answers.a3 && $('#select3').is(':enabled')){
         game.correct++;
-        $("#correct").html("<img src=" + images[0] + " width='400px'>");
+        $("#correct").html("<img src=" + images[0] + " width='400px'><div>You did well!</div>");
         $('#select3').attr('disabled', 'disabled');
         stop();
         slide4();
     } 
     else if( $('#select3 option:selected').val() != game.answers.a3 && $('#select3').is(':enabled')){
         game.wrong++;
-        $("#unanswered").html("<img src=" + images[1] + " width='400px'>");
+        $("#unanswered").html("<img src=" + images[1] + " width='400px'><div>Mario first appeared in the 1981 arcade game Donkey Kong as Jumpman and became an instant celebrity during the period when more than 60,000 arcade machines were sold.</div>");
         $('#select3').attr('disabled', 'disabled');
         stop();
         slide4();
@@ -285,7 +285,7 @@ $('#select3 option').on("click", function(){
 $('#select4 option').on("click", function(){
     if ($('#select4 option:selected').val() === game.answers.a4 && $('#select4').is(':enabled')){
         game.correct++;
-        $("#correct").html("<img src=" + images[0] + " width='400px'>");
+        $("#correct").html("<img src=" + images[0] + " width='400px'><div>You did well!</div>");
         $('#select4').attr('disabled', 'disabled');
         $(".result").show();
         result();
@@ -294,7 +294,7 @@ $('#select4 option').on("click", function(){
     }
     else if( $('#select4 option:selected').val() != game.answers.a4 && $('#select4').is(':enabled')){
         game.wrong++;
-        $("#unanswered").html("<img src=" + images[1] + " width='400px'>");
+        $("#unanswered").html("<img src=" + images[1] + " width='400px'><div>Barack Obama is the nation's 44rd president but in reality there have only been 43 presidents. Grover Cleveland is counted twice as our 22nd and 24th president because he was elected for two nonconsecutive terms. Only 12 U.S. Presidents have been elected to office for two terms and served those two terms.</div>");
         $('#select4').attr('disabled', 'disabled');
         $(".result").show();
         result();
